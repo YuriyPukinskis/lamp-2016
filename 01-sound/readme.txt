@@ -4,6 +4,15 @@
 
 2. Клонировать репозиторий https://github.com/cathedra/lamp-2016/
 
+При появлении ошибки `error: error setting certificate verify locations:` необходимо указать путь к SSL серитификатам:
+```sh
+git config --system http.sslcainfo "C:\Program Files (x86)\git\bin\curl-ca-bundle.crt"
+```
+Или (не рекомендуется, отключает проверку сертификатов):
+```sh
+git config --system http.sslverify false
+```
+
 3. В каталоге solutions создать подкаталог со своим именем и фамилией (англ.), всю дальнейшую работу вести в нем, не забывая делать git commit и git push
 
 4. Установить node и npm 
